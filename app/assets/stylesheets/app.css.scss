@@ -1,0 +1,79 @@
+$lightblue : #87e0fd;   /* Here's how you assign the values to a variable */
+$darkblue : #2cafe3;
+$blue-hero : #49C8D9;
+$cpad: 20px;        /* Variables are not limited to colors, you can use it to store values too*/
+@mixin transition($transition) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin border-radius($border) {
+    -moz-border-radius: $border;
+    -webkit-border-radius: $border;
+    -border-radius: $border;
+}
+
+body {
+    height: 100%;
+
+}
+
+
+@media (min-width: 792px) {
+.menu-hero {
+    position: absolute !important;
+    margin-top: 20px;
+    background: transparent !important;
+    border: 0 !important;
+    a {
+        font-size: 13px;
+        color: rgba(255,255,255, .7);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
+}
+
+.hero-banner {
+    background: $lightblue image-url("hero-banner.jpg");
+    background-size: cover;
+    min-height: 10em !important;
+    padding: 15em 0;
+
+    .hero-title {
+        letter-spacing: 0.0em;
+        line-height: 1.2em;
+        font-weight: 100;
+        font-size: 44px;
+        color: #fff;
+        margin-bottom: 1em;
+    }
+    .hero-content {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.5em;
+        font-weight: 100;
+        margin-bottom: 1em;
+    }
+
+    .btn-hero {
+        color: #fff;
+        background: transparent;
+        border: 1px solid $blue-hero;
+        font-size: 2em;
+        @include transition(0.2s ease all);
+        @include border-radius(0);
+    }
+    .btn-hero:hover {
+            background: $blue-hero;
+            border: 1px solid $blue-hero;
+    }
+}
+
+section#presentation {
+    padding: 200px 0;
+}
+
+.light {
+    font-weight: 200;
+}
