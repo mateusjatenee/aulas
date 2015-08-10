@@ -1,4 +1,11 @@
 class Users::SessionsController < Devise::SessionsController
+    layout :resolve_layout
+    def resolve_layout
+        case action_name
+        when "new"
+            "sessions"
+        end
+    end
 # before_filter :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in

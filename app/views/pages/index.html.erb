@@ -4,7 +4,13 @@
         <p class="hero-content">
           Aprenda Ruby e PHP aqui nesse site, "de grátis". :-)
         </p>
-        <p><a class="btn btn-primary btn-lg btn-hero" href="/login" role="button">Começar!</a></p>
+        <p><a class="btn btn-primary btn-lg btn-hero"
+        <% unless user_signed_in? %>
+         href="/login">Começar</a>
+        <% else %>
+          href="/aulas">Ir para as aulas</a>
+        <% end %>
+</p>
       </div>
     </div>
 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mguimaraes.co</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+
+    body {
+        background-color: #298eea;
+    }
+    .box {
+        background: #fff;
+        margin-top: 3em;
+        padding: 2em;
+        text-align: center;
+
+
+    }
+
+    .login {
+        color: rgba(0, 0, 0, 0.8);
+        font-weight: 100;
+        font-size: 42px;
+    }
+    .btn-login {
+        width: 100%;
+        margin: 1em 0;
+        border: 1px solid #298eea;
+        background: #fff;
+        color: #000;
+        font-size: 23px;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        -webkit-border-radius: 0;
+        transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+        --moz-transition: 0.2s ease all;
+    }
+    .btn-login:hover {
+        background: #298eea;
+        color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+<body
+<%= yield %>
+
+</body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>
